@@ -1,8 +1,5 @@
 # Bash Aliases
-These are a few useful bash aliases.
-```bash
-vim ~/.bash_aliases
-```
+These are a few useful bash aliases to make long commands easier to run.
 
 ### Globus Connect Personal
 This command starts Globus Connect Personal as a background process.
