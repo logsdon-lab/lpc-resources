@@ -6,7 +6,7 @@ SSH into the following hosts in separate terminal windows.
 
 * [Epistasis queue](https://wiki.pmacs.upenn.edu/public/Epistasis_lab) for setting up a collection.
     ```bash
-    ssh $USER@superman.pmacs.upenn.edu
+    ssh $USER@sarlacc.pmacs.upenn.edu
     ```
 
 * `sciglobus` for Globus Personal Connect
