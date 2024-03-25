@@ -18,7 +18,16 @@ module load singularity
 
 #### Development
 Generally, projects and their images should be coupled.
-* WIP - Example
+```
+.
+├── docker
+│   └── Dockerfile
+├── src
+│   └── ...
+└── README.md
+```
+
+Consider also including a `Makefile` with commands for building for future maintainers.
 
 CI workflows are a WIP.
 
@@ -36,7 +45,7 @@ This is a [fork](https://github.com/logsdon-lab/RepeatMasker/tree/fix/v4.1.0-id-
 
 ##### Run
 ```bash
-singularity run /project/logsdon_shared/tools/RepeatMasker70 RepeatMasker --help
+singularity run /project/logsdon_shared/tools/RepeatMasker70.sif RepeatMasker --help
 ```
 
 ##### Pull
