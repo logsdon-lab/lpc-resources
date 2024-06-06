@@ -38,7 +38,7 @@ bsub -Is -q epistasis_interactive -n 10 -R "rusage[mem=8GB] -m rambo 'bash'
 To submit a job.
 
 ```bash
-bsub -Is -q epistasis_long -n 10 -R "rusage[mem=4GB]” -m rambo <cmd_goes_here>
+bsub -q epistasis_long -n 10 -R "rusage[mem=4GB]” -m rambo <cmd_goes_here>
 ```
 
 > [!NOTE]
