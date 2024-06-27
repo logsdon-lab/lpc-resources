@@ -6,6 +6,27 @@ To read general LPC docs, check out resources [here](https://wiki.pmacs.upenn.ed
 ssh $USER@sarlacc.pmacs.upenn.edu
 ```
 
+### Connecting to the LPC (Without Password)
+This will require creating an SSH key and copying it to the cluster under `~/.ssh`.
+
+```bash
+# Add a comment (-C) to distinguish multiple. An email is common.
+ssh-keygen -t rsa -C "$USER@pennmedicine.upenn.edu"
+
+# Go through the prompt and keep the key as id_rsa
+# Enter your passphrase or not.
+```
+
+Copy the key to the cluster. You will need to enter your password here.
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa $USER@sarlacc.pmacs.upenn.edu
+```
+
+Then try again. You should not need to enter your password at this point.
+```bash
+ssh $USER@sarlacc.pmacs.upenn.edu
+```
+
 ### Longer Jobs
 Should be submitted to the `epistasis_long` queue as `epistasis_normal` only allows jobs to last one day.
 * https://wiki.pmacs.upenn.edu/public/Epistasis_lab
