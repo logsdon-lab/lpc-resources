@@ -53,7 +53,7 @@ To run an interactive job on rambo.
 * This allots 10 cores and 8GB for an interactive shell.
 
 ```bash
-bsub -Is -q epistasis_interactive -n 10 -R "rusage[mem=8GB] -m rambo 'bash'
+bsub -Is -q epistasis_interactive -n 10 -R "rusage[mem=8GB]" -m rambo 'bash'
 ```
 
 To submit a job.
