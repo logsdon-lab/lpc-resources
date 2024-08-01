@@ -27,6 +27,13 @@ Then try again. You should not need to enter your password at this point.
 ssh $USER@sarlacc.pmacs.upenn.edu
 ```
 
+
+### Transferring Data
+Use [`sftp`](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) or [`scp`](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/).
+
+Consider [FileZilla](https://filezilla-project.org/) or similar for an easier user experience.
+
+
 ### Longer Jobs
 Should be submitted to the `epistasis_long` queue as `epistasis_normal` only allows jobs to last one day.
 * https://wiki.pmacs.upenn.edu/public/Epistasis_lab
