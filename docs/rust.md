@@ -20,8 +20,8 @@ First, install the extension in vscode.
 Modify your `settings.json` with the following setting `<USER>` to your user directory:
 ```json
 "rust-analyzer.server.extraEnv": {
-    "CARGO": "/home/<USER>/.cargo/bin/cargo",
-    "RUSTC": "/home/<USER>/.cargo/bin/rustc",
+    "CARGO": "${userHome}/.cargo/bin/cargo",
+    "RUSTC": "${userHome}/.cargo/bin/rustc",
 },
 ```
 Restart vscode-server for the changes to take effect.
