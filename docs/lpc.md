@@ -3,7 +3,7 @@ To read general LPC docs, check out resources [here](https://wiki.pmacs.upenn.ed
 
 ### Connecting to the LPC
 ```bash
-ssh $USER@sarlacc.pmacs.upenn.edu
+ssh $USER@rambo.pmacs.upenn.edu
 ```
 
 ### Connecting to the LPC (Without Password)
@@ -19,12 +19,12 @@ ssh-keygen -t rsa -C "$USER@pennmedicine.upenn.edu"
 
 Copy the key to the cluster. You will need to enter your password here.
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa $USER@sarlacc.pmacs.upenn.edu
+ssh-copy-id -i ~/.ssh/id_rsa $USER@rambo.pmacs.upenn.edu
 ```
 
 Then try again. You should not need to enter your password at this point.
 ```bash
-ssh $USER@sarlacc.pmacs.upenn.edu
+ssh $USER@rambo.pmacs.upenn.edu
 ```
 
 
@@ -43,31 +43,26 @@ This is particularly important when running any pipelines via `Snakemake`.
 snakemake -j 4 --cluster 'bsub -q epistasis_long' ...
 ```
 
-### `rambo`
-`rambo` is a compute host within the epistasis queues used for jobs that require large amounts of compute.
-
+### Checking specific hosts
 To view its status.
 ```bash
-bhosts | grep -P "HOST|rambo"
+bhosts | grep -P "HOST|$HOSTNAME"
 ```
 
 To view its specs.
 ```bash
-lshosts | grep -P "HOST|rambo"
+lshosts | grep -P "HOST|$HOSTNAME"
 ```
 
-To run an interactive job on rambo.
+To run an interactive job on `$HOSTNAME`.
 * This allots 10 cores and 8GB for an interactive shell.
 
 ```bash
-bsub -Is -q epistasis_interactive -n 10 -R "rusage[mem=8GB]" -m rambo 'bash'
+bsub -Is -q epistasis_interactive -n 10 -R "rusage[mem=8GB]" -m $HOSTNAME 'bash'
 ```
 
 To submit a job.
 
 ```bash
-bsub -q epistasis_long -n 10 -R "rusage[mem=4GB]” -m rambo <cmd_goes_here>
+bsub -q epistasis_long -n 10 -R "rusage[mem=4GB]” -m $HOSTNAME <cmd_goes_here>
 ```
-
-> [!NOTE]
-> Rambo is also the name of Keith's tortoise.
