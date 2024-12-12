@@ -9,3 +9,4 @@ Documentation on various LPC resources for the Logsdon Lab.
 5. [`tmux`](docs/tmux.md)
 6. [`singularity`](docs/singularity.md)
 7. [`rust`](docs/rust.md)
+8. [`igv`](docs/igv.md)
