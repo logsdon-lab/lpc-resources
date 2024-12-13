@@ -8,8 +8,10 @@ Windows
 Mac
 * [XQuartz](https://www.xquartz.org/)
 
-Linux
-* TODO
+### Connect with X11 forwarding enabled.
+```bash
+ssh -Y $USER@sarlacc.pmacs.upenn.edu
+```
 
 ### IGV Startup Command
 Once connected to the LPC with X forwarding, run the IGV script stored at `/project/logsdon_shared/tools/IGV_Linux_2.19.1/`  
@@ -27,3 +29,6 @@ For easier access, create an SSH connection with:
 This should allow you to startup IGV with a single-click.
 
 ![](imgs/mobaxterm_igv_settings.png)
+
+### XQuartz (Optional)
+TODO
