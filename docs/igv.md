@@ -47,7 +47,7 @@ bash /project/logsdon_shared/tools/IGV_Linux_2.19.1/igv.sh
 ```
 
 > [!NOTE]
-> It has been know than Mac users have issues with IGV and a black screen.
+Mac users may experience issues with rendering IGV, where the screen appears completely black.
 > * https://github.com/igvteam/igv/issues/1352
 >
 > To fix this, you can export this Java option or add this to your `~/.bashrc`
