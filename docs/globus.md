@@ -14,16 +14,24 @@ SSH into the following hosts in separate terminal windows.
     ssh $USER@sciglobus.pmacs.upenn.edu
     ```
 
-### Install [`globus-cli`](https://docs.globus.org/cli/)
-Next, we'll install [`globus-cli`](https://docs.globus.org/cli/) via conda.
+### Load [`globus-cli`](https://docs.globus.org/cli/)
 
-Load `miniconda` and create an environment for `globus-cli`.
+#### Using modules
+PMACS installed `globus-cli` into the default Python interpreter.
+```bash
+module load python/3.10
+globus -h
+```
+
+#### Alternatively, with `conda`
+We can also install [`globus-cli`](https://docs.globus.org/cli/) via conda.
+
+Load `miniconda` or use your own `conda` setup and create an environment for `globus-cli`.
 ```bash
 module load miniconda
 eval "$(/appl/miniconda3-22.11/bin/conda shell.bash hook)"
 ```
 * See [Bash Aliases - Conda](bash_aliases.md#conda) for a quick bash alias.
-
 
 ```bash
 conda create --name globus python
