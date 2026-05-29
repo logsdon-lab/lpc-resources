@@ -2,17 +2,11 @@
 Globus is a useful CLI/online tool to transfer research data via endpoints and collections. It is faster and easier than rsync and similar tools.
 
 ### Getting Started
-SSH into the following hosts in separate terminal windows.
+SSH into the `sciglobus` host.
 
-* [Epistasis queue](https://wiki.pmacs.upenn.edu/public/Epistasis_lab) for setting up a collection.
-    ```bash
-    ssh $USER@sarlacc.pmacs.upenn.edu
-    ```
-
-* `sciglobus` for Globus Personal Connect
-    ```bash
-    ssh $USER@sciglobus.pmacs.upenn.edu
-    ```
+```bash
+ssh $USER@sciglobus.pmacs.upenn.edu
+```
 
 ### Load [`globus-cli`](https://docs.globus.org/cli/)
 
